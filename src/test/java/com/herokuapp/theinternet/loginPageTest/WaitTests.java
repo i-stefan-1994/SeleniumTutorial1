@@ -1,4 +1,4 @@
-package com.herokuapp.theinternet;
+package com.herokuapp.theinternet.loginPageTest;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
