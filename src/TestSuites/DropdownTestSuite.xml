@@ -1,0 +1,7 @@
+<suite name="DropdownTestSuite" verbose="1" parallel="tests" thread-count="4" >
+    <test name="DropdownTests">
+        <classes>
+            <class name = "com.herokuapp.theinternet.dropDownTest.DropDownTest" />
+        </classes>
+    </test>
+</suite>

@@ -9,6 +9,7 @@ public class WelcomePageObject extends BasePageObject {
     String pageUrl = "http://the-internet.herokuapp.com/";
     private By formAuthenticationLocator = By.linkText("Form Authentication");
     private By checkboxLocator = By.xpath("//a[contains(text(),'Checkboxes')]");
+    private By dropDownLocator = By.xpath("//a[contains(text(),'Dropdown')]");
 
     public WelcomePageObject(WebDriver driver, Logger log){
         super(driver, log);
@@ -32,6 +33,12 @@ public class WelcomePageObject extends BasePageObject {
         log.info("Clicking Checkboxes link on the Welcome Page");
         click(checkboxLocator);
         return new CheckboxesPage(driver, log);
+    }
+
+    public DropDownPage clickDropDownLink(){
+        log.info("Clicking Dropdown link on the Welcome page");
+        click(dropDownLocator);
+        return new DropDownPage(driver, log);
     }
 
 }

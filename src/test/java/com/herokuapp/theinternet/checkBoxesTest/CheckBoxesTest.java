@@ -16,13 +16,13 @@ public class CheckBoxesTest extends TestUtilities {
         WelcomePageObject welcomePageObject = new WelcomePageObject(driver, log);
         welcomePageObject.openPage();
 
-        //TODO Click on Checkboxes link
+        //Click on Checkboxes link
         CheckboxesPage checkboxesPage = welcomePageObject.clickCheckBoxesLink();
 
-        //TODO check all checkboxes
+        //check all checkboxes
         checkboxesPage.selectAllCheckboxes();
 
-        //TODO verify if all checkboxes are selected
+        //verify if all checkboxes are selected
         boolean areAllCheckBoxesSelected = checkboxesPage.areAllCheckBoxesSelected();
         Assert.assertTrue(areAllCheckBoxesSelected);
     }
