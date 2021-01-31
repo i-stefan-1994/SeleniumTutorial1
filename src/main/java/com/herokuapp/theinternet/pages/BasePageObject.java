@@ -9,6 +9,8 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
+
 public class BasePageObject {
     protected WebDriver driver;
     protected Logger log;
@@ -32,6 +34,15 @@ public class BasePageObject {
      */
     protected WebElement find(By locator){
         return driver.findElement(locator);
+    }
+
+    /**
+     * Finds all elements by given locator
+     * @param locator
+     * @return
+     */
+    protected List<WebElement> findAll(By locator){
+        return driver.findElements(locator);
     }
 
 

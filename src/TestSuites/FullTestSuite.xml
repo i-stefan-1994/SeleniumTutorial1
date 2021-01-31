@@ -33,15 +33,10 @@
         </classes>
     </test>
 
-<!--    <test name="NegativePasswordTest">-->
+    <test name="CheckBoxesTest">
+        <classes>
+            <class name="com.herokuapp.theinternet.checkBoxesTest.CheckBoxesTest"></class>
+        </classes>
+    </test>
 
-<!--        <parameter name="username" value="tomsmith"></parameter>-->
-<!--        <parameter name="password" value="Cedric"></parameter>-->
-<!--        <parameter name="expectedErrorMessage" value="Your password is invalid!"></parameter>-->
-<!--        <parameter name="browser" value="firefox"></parameter>-->
-
-<!--        <classes>-->
-<!--            <class name="com.herokuapp.theinternet.loginPageTest.LoginTests"/>-->
-<!--        </classes>-->
-<!--    </test>-->
 </suite>

@@ -4,10 +4,7 @@ import com.herokuapp.theinternet.baseTest.testUtilities.TestUtilities;
 import com.herokuapp.theinternet.pages.LoginPage;
 import com.herokuapp.theinternet.pages.SecureAreaPage;
 import com.herokuapp.theinternet.pages.WelcomePageObject;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -57,10 +54,10 @@ public class LoginTests extends TestUtilities {
 
         //Verifications
         //New page url is expected
-        Assert.assertEquals(secureAreaPage.getCurrentUrl(), secureAreaPage.getPageUrl());
+//        Assert.assertEquals(secureAreaPage.getCurrentUrl(), secureAreaPage.getPageUrl());
 
         //log out button is visible
-        Assert.assertTrue(secureAreaPage.isLogOutbuttonVisible(), "Log out button is not visible");
+//        Assert.assertTrue(secureAreaPage.isLogOutbuttonVisible(), "Log out button is not visible");
 
         //succesful log in message
         String expectedFailMessage = "Your username is invalid!";
@@ -83,15 +80,15 @@ public class LoginTests extends TestUtilities {
 
         //Verifications
         //New page url is expected
-        Assert.assertEquals(secureAreaPage.getCurrentUrl(), secureAreaPage.getPageUrl());
+        Assert.assertNotEquals(secureAreaPage.getCurrentUrl(), secureAreaPage.getPageUrl());
 
         //log out button is visible
-        Assert.assertTrue(secureAreaPage.isLogOutbuttonVisible(), "Your password is invalid!");
+//        Assert.assertTrue(secureAreaPage.isLogOutbuttonVisible(), "Your password is invalid!");
 
         //succesful log in message
-        String expectedFailMessage = "Your username is invalid!";
+        String expectedFailMessage = "Your password is invalid!";
         String actualSuccessMessage = secureAreaPage.getFailMessageText();
-        Assert.assertTrue(actualSuccessMessage.contains(expectedFailMessage));
+        Assert.assertTrue(actualSuccessMessage.contains(expectedFailMessage), "Actual fail message is: " + actualSuccessMessage);
 
     }
 
